@@ -1,12 +1,14 @@
+import sys
 import text_retrival as text_ret
 
 class MainApp:
 
-    def __init__(self, surah_retrival):
+    def __init__(self):
         self.surah_retrival = text_ret.SurahApiRetrival()
 
     def run(self):
-        pass
+        response = self.surah_retrival.get_surah_by_juz(30)
+        print(response)
 
 
 
