@@ -6,7 +6,7 @@ import quran_data
 
 load_dotenv()
 
-class SurahApiRetrival:
+class SurahRetrival:
 
     def __init__(self, endpoint = '/en.hilali' ):
         #api url variables

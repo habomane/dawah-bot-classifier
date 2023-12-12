@@ -1,14 +1,19 @@
 import sys
-import text_retrival as text_ret
+import ayat_retrival as ayat_ret
+import ayat_sorting as ayat_sort
 
 class MainApp:
 
     def __init__(self):
-        self.surah_retrival = text_ret.SurahApiRetrival()
+        self.ayat_retrival = ayat_ret.SurahRetrival()
+        self.ayat_sort = ayat_sort.QuranVerseProcessor()
 
     def run(self):
-        response = self.surah_retrival.get_surah_by_juz(30)
-        print(response)
+        #response = self.ayah_retrival.get_surah_by_juz(30)
+        #print(response)
+        resp = self.ayat_sort.verse_to_string_array("Striking them with stones of Sijjil")
+        other = self.ayat_sort.string_array_to_verse(resp)
+        print(other)
 
 
 
